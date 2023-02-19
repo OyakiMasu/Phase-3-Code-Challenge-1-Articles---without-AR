@@ -9,6 +9,7 @@ class Author
     attr_reader :name
 
     @@all = []
+
     def initialize(name)
         @name = name
         @@all << self
@@ -41,13 +42,13 @@ end
 
 
 oyaki = Author.new("Oyaki")
+zaki = Author.new("Zaki")
 
-# zaki = Author.new("Zaki")
 # magazine = Magazine.new("NYC Times", "World Matters")
 # articles = Article.new(author, magazine, "Ultra-Instinct Unlocked!!")
 # articles = Article.new("Goku", magazine, "Ultra-Instinct Unlocked!!")
 
 
 
-binding.pry
+# binding.pry
 

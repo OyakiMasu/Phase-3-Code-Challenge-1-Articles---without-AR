@@ -26,24 +26,23 @@ class Magazine
         authors.uniq
     end
 
-        
+    # def self.find_by_name(name)
+    #     all.select { |magazine| magazine.name == name }.first
     # end
 
-    # def contributers
-    #     authors = []
-    #     Article.all.each do |article|
-    #       if article.magazine == self
-    #         authors << article.author
-    #       end
-    #     end
-    #     authors.uniq
-    #   end
+    def article_titles
+        Article.all.select { |article| article.magazine == self }.map(&:title)
+    end
+
+    def contributing_authors
+        Article.all.group_by(&:author).select { |author, articles| articles.count > 2 }.keys
+    end
 
 end
 
 vogue = Magazine.new("Vogue", "Clothes")
+# vogue2 = Magazine.new("VogUp", "MakeUp")
 
-# vogue = Magazine.new("Vogue", "Clothes")
 # vogue = Magazine.new("Vogue", "Clothes")
 # vogue = Magazine.new("Vogue", "Clothes")
 # vogue = Magazine.new("Vogue", "Clothes")

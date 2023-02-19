@@ -56,8 +56,12 @@ author = Author.new("Oyaki")
 magazine = Magazine.new("NYC Times", "World Matters")
 article = Article.new(author, magazine, "Fall of Solana")
 
-author1 = Author.new("Zaki")
-magazine2 = Magazine.new("MenFit", "Health")
-article2 = Article.new(author, magazine, "Six-pack guide")
+# author1 = Author.new("Zaki")
+# magazine2 = Magazine.new("MenFit", "Health")
+# article2 = Article.new(author, magazine, "Six-pack guide")
+
+author.add_article(magazine, "Marvel is Collapsing")
+
+
 
 binding.pry

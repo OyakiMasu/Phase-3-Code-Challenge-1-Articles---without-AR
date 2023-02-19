@@ -9,6 +9,7 @@ class Article
     attr_accessor :author, :magazine, :title
 
     @@all = []
+
     def initialize(author, magazine, title)
         @author = author
         @magazine = magazine
@@ -33,4 +34,4 @@ article = Article.new(author, magazine, "Fall of Solana")
 
 
 
-binding.pry
+# binding.pry
