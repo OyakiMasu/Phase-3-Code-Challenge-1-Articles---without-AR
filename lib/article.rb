@@ -1,5 +1,10 @@
 require 'pry'
 
+require_relative './author.rb'
+require_relative './magazine.rb'
+
+
+
 class Article
 
     attr_reader :author, :magazine, :title
@@ -20,7 +25,9 @@ class Article
 
 end
 
-crypto = Article.new("Masahi", "NYC Times", "Fall of Solana")
+author = Author.new("Oyaki")
+magazine = Magazine.new("NYC Times", "World Matters")
+article = Article.new(author, magazine, "Fall of Solana")
 
 
 binding.pry
