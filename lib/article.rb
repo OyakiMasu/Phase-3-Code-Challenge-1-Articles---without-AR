@@ -4,10 +4,9 @@ require_relative './author.rb'
 require_relative './magazine.rb'
 
 
-
 class Article
 
-    attr_reader :author, :magazine, :title
+    attr_accessor :author, :magazine, :title
 
     @@all = []
     def initialize(author, magazine, title)
@@ -15,7 +14,6 @@ class Article
         @magazine = magazine
         @title = title
         @@all << self
-
 
     end
 
@@ -28,6 +26,11 @@ end
 author = Author.new("Oyaki")
 magazine = Magazine.new("NYC Times", "World Matters")
 article = Article.new(author, magazine, "Fall of Solana")
+
+# author1 = Author.new("Zaki")
+# magazine2 = Magazine.new("MenFit", "Health")
+# article2 = Article.new(author, magazine, "Six-pack guide")
+
 
 
 binding.pry
