@@ -27,6 +27,16 @@ class Author
         @@all
     end
 
+    def add_article(magazine, title)
+        Article.new(self, magazine,title)
+    end
+
+    #Isnt working 
+    def topic_areas
+        magazines.map { |magazine| magazine.category }.uniq
+    end
+
+
 end
 
 

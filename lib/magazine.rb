@@ -49,4 +49,4 @@ vogue = Magazine.new("Vogue", "Clothes")
 # vogue = Magazine.new("Vogue", "Clothes")
 
 
-binding.pry
+# binding.pry
