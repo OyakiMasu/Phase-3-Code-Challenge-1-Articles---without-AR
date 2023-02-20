@@ -2,8 +2,6 @@ require 'pry'
 
 require_relative '../config/environment.rb'
 
-
-
 # class Author
 
 #     attr_reader :name
@@ -56,12 +54,14 @@ author = Author.new("Oyaki")
 magazine = Magazine.new("NYC Times", "World Matters")
 article = Article.new(author, magazine, "Fall of Solana")
 
-# author1 = Author.new("Zaki")
-# magazine2 = Magazine.new("MenFit", "Health")
-# article2 = Article.new(author, magazine, "Six-pack guide")
+author = Author.new("Oyaki")
+magazine = Magazine.new("NYC Times", "World Matters")
+article3 = Article.new(author, magazine, "Fall of Solana")
 
-author.add_article(magazine, "Marvel is Collapsing")
+author1 = Author.new("Zaki")
+magazine2 = Magazine.new("MenFit", "Health")
+article2 = Article.new(author, magazine, "Lose weight guide")
 
+# binding.pry
 
-
-binding.pry
+magazine.contributing_authors
