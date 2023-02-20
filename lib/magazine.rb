@@ -15,37 +15,53 @@ class Magazine
     def self.all
         @@all
     end
+    def name
+        @name
+    end
 
     def contributors
         authors = []
         Article.all.select do |article|
-            if article.magazine = self 
+            if article.magazine == self
             authors << article.author
             end
-        end    
+        end
         authors.uniq
     end
 
-    # def self.find_by_name(name)
-    #     all.select { |magazine| magazine.name == name }.first
-    # end
+    #Issue of not creating instead of finding
+    def self.find_by_name(name)
+        @@all.detect { |magazine| magazine.name == name}
+    end
 
     def article_titles
-        Article.all.select { |article| article.magazine == self }.map(&:title)
+        Article.all.map { |article| article.title }
+
     end
 
     def contributing_authors
-        Article.all.group_by(&:author).select { |author, articles| articles.count > 2 }.keys
+        counts = Hash.new(0)
+        #authors
+        con = []
+        #con authors
+        auth = []
+        Article.all.select do |article|
+        if article.magazine.name == @name
+            con << article.author.name
+            end
+        end
+        con.each do |final| counts[final] += 1
+        end
+        counts.each do |final, aggregate| auth << final if aggregate > 2
+        end
+      pp  auth
+        
     end
+
+
 
 end
 
 vogue = Magazine.new("Vogue", "Clothes")
-# vogue2 = Magazine.new("VogUp", "MakeUp")
-
-# vogue = Magazine.new("Vogue", "Clothes")
-# vogue = Magazine.new("Vogue", "Clothes")
-# vogue = Magazine.new("Vogue", "Clothes")
-
 
 # binding.pry

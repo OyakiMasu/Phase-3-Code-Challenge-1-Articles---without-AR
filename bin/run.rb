@@ -62,6 +62,6 @@ author1 = Author.new("Zaki")
 magazine2 = Magazine.new("MenFit", "Health")
 article2 = Article.new(author, magazine, "Lose weight guide")
 
-# binding.pry
+binding.pry
 
-magazine.contributing_authors
+# magazine.contributing_authors

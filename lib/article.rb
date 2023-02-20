@@ -24,11 +24,11 @@ class Article
 
 end
 
-author = Author.new("Oyaki")
-magazine = Magazine.new("NYC Times", "World Matters")
-article = Article.new(author, magazine, "Fall of Solana")
+# author = Author.new("Oyaki")
+# magazine = Magazine.new("NYC Times", "World Matters")
+# article = Article.new(author, magazine, "Fall of Solana")
 
-# author1 = Author.new("Zaki")
+# author1 = Author.new("Arnold")
 # magazine2 = Magazine.new("MenFit", "Health")
 # article2 = Article.new(author, magazine, "Six-pack guide")
 

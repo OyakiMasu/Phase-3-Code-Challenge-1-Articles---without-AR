@@ -1,4 +1,4 @@
-#  Articles---without-AR
+# Articles---without-AR .
 
 ## Table of Content
 <ol>
@@ -60,6 +60,11 @@ has many Articles and Articles belong to both Author and Magazine.
    * I used pry to test out the requiremnets .
    * In environmet.rb I used it as a place to store the              require_relatives to make it easier .
    * Then for each requiremnet run through them through pry and if you want clarity you can test through each file .Some are not direct but are simple to figure.
+
+  <p align="center">
+  <img src="Screenshot1.png" width="350" title="hover text">
+  <img src="Screenshot2.png" width="350" alt="accessibility text">
+</p>
 
    ### License
    * This project is licensed under ISC.

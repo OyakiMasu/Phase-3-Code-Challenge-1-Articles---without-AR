@@ -17,11 +17,11 @@ class Author
     end
 
     def articles
-        Article.all.select{ |article| article.author == self}
+        Article.all.select { |article| article.author == self}
     end
 
     def magazines
-        articles.map {  |article| article.magazine }.uniq
+        articles.map { |article| article.magazine }.uniq
     end
 
     def self.all
@@ -29,26 +29,19 @@ class Author
     end
 
     def add_article(magazine, title)
-        Article.new(self, magazine,title)
+        Article.new(self, magazine, title)
     end
 
-    #Isnt working 
+    
     def topic_areas
-        magazines.map { |magazine| magazine.category }.uniq
-    end
+        Article.all.map {|article| article.magazine }
 
+    end
 
 end
 
-
 oyaki = Author.new("Oyaki")
-zaki = Author.new("Zaki")
-
-# magazine = Magazine.new("NYC Times", "World Matters")
-# articles = Article.new(author, magazine, "Ultra-Instinct Unlocked!!")
-# articles = Article.new("Goku", magazine, "Ultra-Instinct Unlocked!!")
-
-
+# zaki = Author.new("Zaki")
 
 # binding.pry
 
